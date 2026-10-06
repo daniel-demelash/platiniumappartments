@@ -1,0 +1,98 @@
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: clamp(2.5rem, 5vw, 4rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-grid li {
+  display: grid;
+  align-content: space-between;
+  gap: 2rem;
+  min-height: 190px;
+  padding: 1.5rem;
+  background: var(--bg-alt);
+  border-radius: 24px;
+  transition: transform 0.25s, box-shadow 0.25s, background-color 0.25s;
+}
+
+.service-grid li:hover {
+  background: var(--surface);
+  box-shadow: 0 24px 48px -28px rgba(28, 26, 23, 0.35);
+  transform: translateY(-4px);
+}
+
+.service-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.service-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  color: var(--primary-dark);
+  background: var(--primary-bg);
+  border-radius: 14px;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.service-grid li:hover .service-icon {
+  color: var(--on-primary);
+  background: var(--primary-dark);
+}
+
+.service-num {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.service-grid h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.services-am {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 2rem 4rem;
+  align-items: start;
+}
+
+.services-am ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services-am li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--surface);
+  border-radius: 999px;
+}
+
+.services-am svg {
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+@media (max-width: 860px) {
+  .services-am {
+    grid-template-columns: 1fr;
+  }
+}
